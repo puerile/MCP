@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 
 public class FileTest extends TestCase
    {
-   String path = "$directory";
+   String path = System.getProperty("user.dir");
    FileHandler fh = new FileHandler();
    File file = new File(path);
    File[] before = new File[3];
@@ -68,12 +68,12 @@ public class FileTest extends TestCase
       {
       File[] after = new File[2];
 
-      before[0] = new File("C:\\Users\\harbeck\\Zeuch\\Testordner\\1.txt");
-      before[1] = new File("C:\\Users\\harbeck\\Zeuch\\Testordner\\2.txt");
-      before[2] = new File("C:\\Users\\harbeck\\Zeuch\\Testordner\\3.txt");
+      before[0] = new File(System.getProperty("user.dir") + "\\1.txt");
+      before[1] = new File(System.getProperty("user.dir") + +\\2.txt");
+      before[2] = new File(System.getProperty("user.dir") + "\\3.txt");
 
-      after[0] = new File("C:\\Users\\harbeck\\Zeuch\\Testordner\\2.txt");
-      after[1] = new File("C:\\Users\\harbeck\\Zeuch\\Testordner\\3.txt");
+      after[0] = new File(System.getProperty("user.dir") + "\\2.txt");
+      after[1] = new File(System.getProperty("user.dir") + "\\3.txt");
 
       System.out.println("before:");
       print(before);
