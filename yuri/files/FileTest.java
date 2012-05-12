@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 
 public class FileTest extends TestCase
    {
-   String path = "C:\\Users\\harbeck\\Zeuch\\Testordner\\3.txt";
+   String path = "$directory";
    FileHandler fh = new FileHandler();
    File file = new File(path);
    File[] before = new File[3];
